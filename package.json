@@ -4,13 +4,16 @@
   "description": "A generic shift-reduce parser for nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha spec --reporter list --require should"
+    "lint": "eslint .",
+    "test": "npm run lint && npm run unit-test",
+    "unit-test": "mocha spec --reporter list --require should"
   },
   "repository": "",
   "author": "Ken Koch <kkoch986@gmail.com>",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "eslint": "^2.7.0",
     "mocha": "*",
     "should": "*"
   }
